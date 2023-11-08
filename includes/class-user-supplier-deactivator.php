@@ -20,17 +20,28 @@
  * @subpackage User_Supplier/includes
  * @author     Mohamad Hesari <mdhesari99@gmail.com>
  */
-class User_Supplier_Deactivator {
+class User_Supplier_Deactivator
+{
 
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function deactivate() {
+    /**
+     * Short Description. (use period)
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function deactivate()
+    {
+        self::delete_tables();
+    }
 
-	}
+    private static function delete_tables()
+    {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix.'suppliers';
+
+        $wpdb->query("DROP TABLE IF EXISTS $table_name");
+    }
 
 }
