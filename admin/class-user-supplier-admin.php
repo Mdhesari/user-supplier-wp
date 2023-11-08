@@ -103,4 +103,23 @@ class User_Supplier_Admin
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__).'js/user-supplier-admin.js', array('jquery'), $this->version, false);
 
     }
+
+    public function initialize_admin()
+    {
+        //
+    }
+
+    public function menus()
+    {
+        add_menu_page(
+            __('تامین کنندگان', 'alibuy'), // Translated menu title
+            __('تامین کنندگان', 'alibuy'), // Translated menu title
+            'manage_options', // Capability required to access
+            'supplier-list', // Page Slug
+            'display_supplier_list', // Callback function to display the page
+            'dashicons-groups', // Menu Icon (change to a suitable icon)
+            20 // Menu Position
+        );
+    }
+
 }

@@ -45,7 +45,8 @@ class User_Supplier_Activator
         $sql = "CREATE TABLE $table_name (
     id INT AUTO_INCREMENT PRIMARY KEY,
     company_name VARCHAR(255) NOT NULL,
-    product VARCHAR(255),
+    product_name VARCHAR(255),
+    email VARCHAR(255),
     price DECIMAL(10, 2),
     country VARCHAR(100),
     city VARCHAR(100),
