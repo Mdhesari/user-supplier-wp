@@ -25,5 +25,8 @@ e.g.
 
 == Changelog ==
 
-= 0.1.0 =
+= 0.1.0
 * Add table, admin listing & menus
+
+= 0.2.0
+* add new type field
