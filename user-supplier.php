@@ -108,6 +108,7 @@ function display_supplier_list()
         echo '<tr>';
         echo '<th>ID</th>';
         echo '<th>نام شرکت</th>';
+        echo '<th>نوع</th>';
         echo '<th>ایمیل</th>';
         echo '<th>محصول</th>';
         echo '<th>قیمت</th>';
@@ -127,8 +128,9 @@ function display_supplier_list()
         foreach ($suppliers as $supplier) {
             echo '<tr>';
             echo '<td>'.$supplier->id.'</td>';
-            echo '<td>'.$supplier->email.'</td>';
             echo '<td>'.$supplier->company_name.'</td>';
+            echo '<td>'.$supplier->type.'</td>';
+            echo '<td>'.$supplier->email.'</td>';
             echo '<td>'.$supplier->product_name.'</td>';
             echo '<td>'.$supplier->price.'</td>';
             echo '<td>'.$supplier->country.'</td>';
