@@ -30,12 +30,20 @@ if (! defined('WPINC')) {
     die;
 }
 
+global $wpdb;
+
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
 define('USER_SUPPLIER_VERSION', '1.0.0');
+
+/**
+ * Database name for user supplier registration
+ * Starts with a prefix of $wpdb
+ */
+define('SUPPLIER_TABLE_NAME', $wpdb->prefix.'suppliers');
 
 /**
  * The code that runs during plugin activation.
@@ -91,7 +99,7 @@ function display_supplier_list()
     echo '<h2>تامین کنندگان</h2>';
 
     global $wpdb;
-    $table_name = $wpdb->prefix.'suppliers';
+    $table_name = SUPPLIER_TABLE_NAME;
     $suppliers = $wpdb->get_results("SELECT * FROM $table_name");
 
     if (! empty($suppliers)) {

@@ -39,7 +39,7 @@ class User_Supplier_Deactivator
     {
         global $wpdb;
 
-        $table_name = $wpdb->prefix.'suppliers';
+        $table_name = SUPPLIER_TABLE_NAME;
 
         $wpdb->query("DROP TABLE IF EXISTS $table_name");
     }

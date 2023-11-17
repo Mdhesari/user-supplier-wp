@@ -39,7 +39,7 @@ class User_Supplier_Activator
     {
         global $wpdb;
 
-        $table_name = $wpdb->prefix.'suppliers';
+        $table_name = SUPPLIER_TABLE_NAME;
         $charset_collate = $wpdb->get_charset_collate();
 
         $sql = "CREATE TABLE $table_name (
