@@ -55,6 +55,7 @@ class User_Supplier_Activator
     company_telephone VARCHAR(20),
     agent_name VARCHAR(100),
     agent_mobile VARCHAR(20),
+    type VARCHAR(20),
     description TEXT,
     introduction_letter_url VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
